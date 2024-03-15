@@ -1,0 +1,34 @@
+<odoo>
+    <record model="ir.ui.view" id="students_training_view_form">
+        <field name="name">trainings.form</field>
+        <field name="model">students.training</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Training">
+                <sheet>
+                    <label for="code" string="Training code"/>
+                    <field name="code"/>
+                    <label for="name" string="Training name"/>
+                    <field name="name"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="students_training_view_tree">
+        <field name="name">trainings.tree</field>
+        <field name="model">students.training</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Students">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_students_training_view">
+        <field name="name">Trainings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">students.training</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
